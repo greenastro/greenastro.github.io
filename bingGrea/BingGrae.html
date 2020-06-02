@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>빙그레우유</title>
+    <style>
+        *{ margin:0; 
+           padding:0;
+           }
+        /* 햄버거 메뉴 만들기 시작 */
+        li{
+            list-style-type: none;
+            line-height:9px;       
+          }
+        /*햄버거 메뉴 만들기 끝*/
+        .clear{
+            clear:both;
+        }
+        #container{
+            margin:0 auto; 
+            width: 600px;
+            height:1000px;
+            background-image:url('image/background.jpg');
+            background-size: cover;
+            background-repeat:no-repeat;
+          }
+        header{
+            width:100%;
+            height:7%;
+            background-color:white;
+            display: inline-block;
+             }
+        nav{
+            float:right;
+            margin-top:15px;
+            margin-right:9px;
+           }
+        section{
+            height:92%;
+            position:relative;
+        }
+        
+        section>img:nth-of-type(1){
+            display:block;
+            position:absolute;
+            right:0;
+            bottom:0;
+            width:90%;
+        }
+        
+        section>img:last-child{
+            display:block;
+            position:absolute;
+            right:0;
+            bottom:35px;
+            width:100%;
+          
+           
+        }
+        section{
+            margin-top:8%;
+            margin-left:50px;
+        }
+        
+        section>h3{
+            color:red;
+            font-weight:900;
+            padding-top:30px;
+        }
+        section>p{
+            padding: top 30px;
+            padding-bottom:40px;
+          }
+        /* 자세히보기 버튼 */
+        section>input{
+            color:red;
+            font-weight:900;
+            width:200px;
+            text-align:center;
+            line-height: 3em;
+            border-radius:30px;
+            border-style: none;
+            font-size: 15px;
+        }
+        h1{
+            font-size:40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+     <header>
+        <img src="./image/빙그레로고jpg.jpg" width="200px">
+        <nav>
+         <ul>
+             <li>____</li>
+             <li>____</li>
+             <li>____</li>
+         </ul>
+        </nav>
+    </header>
+    <div class="clear"></div>
+    <section>
+         <h1>다양한 맛과 행복으로<br>
+             모두 하나되는 세상</h1>
+         <h3>우유/가공유</h3><br>
+         <p>
+          고객만족을 넘어서 함께 더 나은 세상을 만드는 것,<br>
+          그것이 바로 빙그레의 가치입니다. 
+         </p>
+         <input type="button" background-color="white" value="자세히 보기">
+         <img src="./image/banana.png" alt="단지 바나나우유" width="450px">
+         <img src="./image/circle.png" alt="배경원">
+    </section>
+    </div>
+   </body>
+</html>
