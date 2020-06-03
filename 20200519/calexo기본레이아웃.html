@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Calexo</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                font-family: "Lobster", cursive;
+            }
+            /*위아래 반씩 분할 및 색상 넣음*/
+            #up,#down {
+                width: 100%;
+                height: 50vh;
+            }
+            #up {
+                background-color: rgb(255, 105, 86);
+                font-size: 0;
+            }
+            #down {
+                background-color: paleturquoise;
+                font-size: 0;
+            }
+            /*상단 햄버거메뉴*/
+            #up > img {
+                width: 90px;
+                float: right;
+            }
+            /*상단 글씨 및 이미지*/
+            #up > div {
+                height: 100%;
+                float: left;
+                font-size: 1rem;
+                box-sizing: border-box;
+                color: white;
+            }
+            #up > div:nth-of-type(1) {
+                width: 8%;
+                font-size: 3rem;
+                letter-spacing: 0.8rem;
+                position: relative;
+                top: 30px;
+                left: 30px;
+                /* font-size:1.2cm;
+          color:white;
+          float:left;
+          padding-top:1%;
+          padding-left:3%;  */
+            }
+            #up > div:nth-of-type(2) {
+                width: 52%;
+                font-size: 10rem;
+                position: relative;
+                top: 200px;
+                left: 40px;
+                z-index: 1;
+                /* font-size:3cm; 
+       color:white;
+       float:left;
+       padding-top:10%;*/
+            }
+            #up > div:nth-of-type(3) {
+                width: 25%;
+                background-image: url("장미.JPG");
+                background-size: cover;
+                background-position: left;
+                /* font-size:3.5cm;
+       color:white;
+       float:right;
+       Padding-top:20%;
+       padding-right:13%;
+       padding-left:5%;
+       height: 50%;
+       background-image: url('장미.JPG');
+       background-repeat: no-repeat;
+       background-size: 72%; */
+            }
+            #up > div:nth-of-type(3) > div {
+                font-size: 10rem;
+                position: relative;
+                top: 250px;
+                z-index: 3;
+            }
+            #up > div:nth-of-type(4) {
+                width: 15%;
+            }
+            /* 하단 이미지, 글귀*/
+            #down > div {
+                height: 100%;
+                float: left;
+                font-size: 1rem;
+                box-sizing: border-box;
+                color: teal;
+                margin-top:-45px;
+                /* color:teal;
+          float:right;
+          padding-right:17%;
+         padding-top:0%;
+          width:450px;
+          font-size:xx-large; */
+            }
+            #down > div:nth-of-type(1) {
+                width: 15%;
+             
+                /* float:left;
+        padding-left:13%;
+        Height:100%; */
+            }
+            #down > div:nth-of-type(2){
+                width: 25%;
+                background-image: url("s1.JPG");
+                background-size: auto;
+                background-position: center;
+                position: relative;
+                z-index: 3;
+            }
+            #down > div:nth-of-type(3) {
+                width: 50%;
+            }
+            #down > div:nth-of-type(3) > div {
+                font-size: 2rem;
+                position: relative;
+                top: 50px;
+                left: 450px;
+                z-index: 5;
+            }
+            #circle > div:nth-of-type(1) {
+                width: 600px;
+                height: 600px;
+                border-radius: 50%;
+                background-color: #ffc11a;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -300px;
+                margin-top: -300px;
+            }
+            #circle > div:nth-child(2) {
+                display: block;
+                width: 300px;
+                height: 600px;
+                background-image: url("병.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -300px;
+                margin-left: -150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="up">
+            <img src="햄버거메뉴.jpg" />
+            <div>calexo</div>
+            <div>Citrus</div>
+            <div>
+                <div>Rose</div>
+            </div>
+            <div></div>
+        </div>
+
+        <div id="down">
+            <div></div>
+            <div></div>
+            <div>
+                <div>
+                    Brighten your perspective with<br><br>
+                    this blend of uplifting citrus,<br><br>
+                    aromatic botanicals and nano-emulsified THC.<br><br>
+                    Effervescent and lightly-lifting.<br><br>
+                    An experience worth sharing.
+                </div>
+            </div>
+        </div>
+        <div id="circle">
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

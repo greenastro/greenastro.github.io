@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #main{
+            width : 500px;
+            height: 500px;
+            border :2px solid red;
+            position: relative;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            /* background-color: yellow;
+
+            position: absolute;
+            bottom:100px; */
+        }
+        .yellow{
+            background-color: yellow;
+            height: 100px;
+        }
+
+        .blue{
+            background-color: blue;
+            height:100px;
+        }
+        #main>.yellow{
+            float: left;}
+        .blue{clear:both;}
+
+        /* #blue{
+            width :100px;
+            height:100px;
+            background-color: blue;
+                      } */
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="box yellow"></div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type 
+            specimen book.
+        </p>
+        <div class="clear"></div>
+        <div class="box blue"></div>
+        </div>    
+
+</body>
+</html>
