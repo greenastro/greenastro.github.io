@@ -1,0 +1,201 @@
+@charset "utf-8";
+body{font-family: 'BM DoHyeon', cursive;}
+/*Header 관련*/
+.logo{
+    font-family: 'Faster One', cursive;
+    display: flex;
+    justify-content: space-between;
+}
+.logo>a{
+    font-size:30px;
+    color:rgb(157,178,163);
+}
+.logo>a>span {color:rgb(40,224,70);}
+.logo>button{
+    border: none;
+    background:none;
+    opacity:0.5;
+    cursor:pointer;
+    font-size:30px;
+    color:rgb(157,178,163);
+    
+}
+.menu a{
+    display: block;
+    color:rgb(157,178,163);
+    padding:15px;
+    font-weight: bolder; 
+}
+.menu{
+    display:none;
+    letter-spacing: 1px;
+
+}
+/*배너관련*/
+.banner{
+    background-image: linear-gradient(rgba(148, 209, 158, 0.342),rgba(87, 187, 127, 0.342)), url('../images/mainbanner.jpg');
+    background-position:center;
+    background-size: cover;
+
+    height:80vh;
+    
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+
+.banner h1{
+    color:white;
+    font-size:7em;
+    font-style: bold;
+    letter-spacing:0.3em;
+    margin-bottom:15px;
+    text-shadow: 30px, 70px, 10px, black;
+}
+.banner p{
+    color:white;
+    font-size: 1.5em;
+    opacity:0.6;
+    text-shadow:20px,70px,5px, black;
+    letter-spacing: 0.4em;
+
+}
+.sub_title{
+    color: rgb(40,224,70);
+    font-size:50px;
+    margin:50px auto 0px auto;
+    text-align: center;
+}
+/*info H,P,B 소개글*/
+.info{
+    width: 70%;
+    margin: 50px auto;
+}
+.info>ul{
+    display: flex;
+    flex-direction: column;
+
+}
+.info>ul>li{
+    width:500px;
+
+}
+.info>ul>li>div{    
+        background-color:rgb(203,228,199);
+        color:rgb(40,224,70);
+    
+        font-size:60px;
+        border-radius: 64.3px 10.87px 75.49px 29.7px;
+    
+         width:2em;
+         height:2em;
+         text-align:center;
+         line-height:2em;
+         margin: 10px auto;
+    
+         /* margin-right: 230px;
+         margin-left: 200px; */
+}
+.info>ul>li>h3{
+    font-size:30px;
+    color:rgb(40,224,70);
+    text-align: center;
+}
+.info>ul>li>p{
+    width: 80%;
+    margin: 30px auto;
+    color:rgb(66,94,72);
+    line-height:25px;
+    letter-spacing: 1px;
+}
+
+/*Portofolio*/
+.Portofolio>p{
+    text-align: center;
+    color:rgb(66,94,72);
+}
+#p1{
+    height: 10px;
+    width:10px;
+}
+#p2{
+    height:20px;
+    width:10px;
+
+}
+#p3{height:10px;
+    width:20px;}
+
+.contact>.text{
+    margin:50px auto;
+    text-align: center;
+    color:rgb(66,94,72);
+    line-height:25px;
+    letter-spacing: 1px;
+
+}
+.contact>ul{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
+/*컨텍트 요소 만들기, html에 icon 클래스 주고나서*/
+.contact .icon{
+    background-color:rgb(203,228,199);
+    color:white;
+
+    font-size:40px;
+    border-radius: 64.3px 10.87px 75.49px 29.7px;
+
+     width:2em;
+     height:2em;
+     text-align:center;
+     line-height:2em;
+
+     margin-right:20px;
+}
+
+/* 테블릿 사이즈*/
+@media all and (min-width:768px) 
+{
+    .header{
+        display:flex;
+        justify-content: space-between;
+      
+    }
+
+    .logo>button{
+        display: none;
+    }
+    .menu{
+        display:block;
+    }
+    .menu>ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;       
+    }
+    .info>ul{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    
+    }
+}
+
+
+
+
+/* PC용 사이즈*/
+@media all and (min-width:1024px) 
+{
+    .header{
+        width: 1024px;
+        margin: 0 auto;
+        display:flex;
+        justify-content: space-between;
+    }
+
+}
+

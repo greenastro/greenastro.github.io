@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/reset.css" type="text/css" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1bd41b8130.js" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.5.1.js"></script>
+        <title>Potofolio</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">EUN<span>J</span>IN</a>
+                <button type="button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PORTOFOLIO</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="banner">
+            <h1>PORTFOLIO</h1>
+            <P>WebPublisher Lee Eunjin</P>
+        </section>
+        <section class="info">
+        <ul>
+            <li>
+                <div>H.</div>
+                <h3>HOMEPAGE</h3>
+                 <p>
+                     디자인 시안 작업을 포함하여 반응형웹, 모바일웹 등의 프랫폼에 최적화된 홈페이지 디자인 작업 및 웹프로그램 개발까지 고객이 원하는 전략에 충실하게 수행하여 성공적인 디자이너가 되도록 최선을 다하고 있습니다.
+                </p>
+            </li>
+            <li>
+                <div>P.</div>
+                <h3>PUBLISHING</h3>
+                <p> 
+                    Creative Design(Web/Mobile, UX/UI) HTML5 / CSS3 웹표준, 모바일웹 퍼블리싱 웹프로그램 개발, 웹프로모션 컨설팅 홈페이지 유지보수/관리
+                </p>
+            </li>
+            <li>
+                <div>B.</div>
+                <h3>BRANDING</h3>
+                <p>
+                    풍부한 온라인 마케팅 경험과 역량을 바탕으로 통합 웹서비스를 제안드리며, 창의적인 발상과 폭 넓은 네트워크를 기반하여 다양한 전문분야의 효과적인 Creative Design 방법론을 안합니다.
+                </p>
+            </li>
+        </ul>
+        </section>
+        <section class="Portofolio">
+            <h2 class="sub_title">Portofolio</h2>
+            <p>WebPublisher Lee Eunjin</p>
+                    <img src="images/p2.JPG">
+                    <img src="images/p7.JPG">
+                    <img src="images/p1.JPG">
+                
+                    <img src="images/p4.JPG">
+                    <img src="images/p5.JPG">
+                    <img src="images/p6.JPG">
+                
+                    <img src="images/p9.JPG">
+                    <img src="images/p8.JPG">
+                    <img src="images/p3.JPG">
+             
+
+            </ul>
+        </section>
+        <section class="contact">
+            <h2 class="sub_title">Contact</h2>
+            <div class="text">
+                <P>
+                    안녕하세요. 이은진 입니다.
+                </P>
+                <p>
+                    궁금한 사항을 메일로 문의해 주시면 빠른
+                    시일내에 답변 드리도록 하겠습니다.
+                </p>
+                <p>
+                    감사합니다.
+                </p>
+            </div>
+             <ul>
+                 <li><a href="#"><i class="fab fa-twitter icon"></i></a></li>
+                 <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
+                 <li><a href="#"><i class="fab fa-facebook-f icon"></i></a></li>
+                 <li><a href="#"><i class="fas fa-envelope icon"></i></a></li>
+             </ul>
+
+        </section>
+        <footer class="footer"></footer>
+        <script>
+            $(function(){
+                /*제이쿼리 소스 기재*/
+                $(".logo>button").click(function(){
+                    $(".menu").slideToggle();
+                })
+            });
+        </script>
+    </body>
+</html>
