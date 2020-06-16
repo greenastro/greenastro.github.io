@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 body{font-family: 'Do Hyeon', sans-serif;}
 /*Header 관련*/
 header {
@@ -117,17 +117,17 @@ header {
     letter-spacing: 1px;
 }
 
-/*Portofolio*/
-.Portofolio{
+/*Portfolio*/
+.Portfolio{
     width:100%;
 }
-.Portofolio>p{
+.Portfolio>p{
     margin:10px auto;
     text-align: center;
     color:rgb(66,94,72);
     
 }
-.Portofolio>div{
+.Portfolio>div{
     /* width:700px;
     margin:30px auto;
     display: flex; */
@@ -144,7 +144,7 @@ header {
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
-.Portofolio>div>.item{
+.Portfolio>div>.item{
     width:90%;
     /* margin:1%; */
     padding-bottom:10px;
@@ -293,18 +293,22 @@ header {
     color: rgb(40,224,70);
     font-size:90px;
     margin:90px auto 0px auto;
+    padding-top:90px;
     text-align: center;
 
     width: 100%;
 }
-.Portofolio>p{
+.Portfolio{
+    background-color: rgb(215,215,215);
+}
+.Portfolio>p{
     font-size:30px;
     margin:10px auto 100px auto;
     text-align: center;
     color:rgb(66,94,72);
     
 }
-    .Portofolio>div>.item {
+    .Portfolio>div>.item {
         width: 31%;
 
     }
@@ -319,11 +323,10 @@ header {
 
     .footer{
         width:100%;
-        font-size:35px;
-        background-color:rgb(157,178,163);
-        color:white;
+        font-size:25px;
+        background-color:rgb(215,215,215);
+        color:rgb(157,178,163);
         text-align: center;
         margin-top:10%;
     }
 }
-
