@@ -70,6 +70,7 @@ header {
     color: rgb(40,224,70);
     font-size:50px;
     margin:50px auto 0px auto;
+    padding-top:30px;
     text-align: center;
 
     width: 100%;
@@ -120,6 +121,7 @@ header {
 /*Portfolio*/
 .Portfolio{
     width:100%;
+    background-color: rgb(215,215,215);
 }
 .Portfolio>p{
     margin:10px auto;
@@ -139,17 +141,24 @@ header {
     display: flex;
     flex-flow:column wrap;
     align-items:flex-start; */
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    margin: 50px auto;
+    align-items: flex-start;
+    
 }
 .Portfolio>div>.item{
     width:90%;
     /* margin:1%; */
     padding-bottom:10px;
 }
-
+.contact>p{
+    margin:10px auto;
+    text-align: center;
+    color:rgb(66,94,72);
+}
 .contact>.text{
     margin:50px auto;
     text-align: center;
@@ -214,6 +223,39 @@ header {
         justify-content:space-between;
     
     }
+    .Portfolio{
+        width:100%;
+        background-color: rgb(215,215,215);
+    }
+    .Portfolio>p{
+        margin:10px auto;
+        text-align: center;
+        color:rgb(66,94,72);
+        
+    }
+    .Portfolio>div{
+        /* width:700px;
+        margin:30px auto;
+        display: flex; */
+        /* box-sizing: border-box;
+        padding:10px;
+        max-width:700px;
+        margin : 0 auto;
+        height: 470px;
+        display: flex;
+        flex-flow:column wrap;
+        align-items:flex-start; */
+        width: 90%;
+        display: flex;
+       
+        margin: 0px auto;
+        align-items: flex-start;
+        
+    }
+    .Portfolio>div>.item{
+        width:50%;
+        /* margin:1%; */
+        padding-bottom:10px;
 }
 
 
