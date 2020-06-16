@@ -52,15 +52,15 @@ header {
 
 .banner h1{
     color:white;
-    font-size:4em;
+    font-size:3.5em;
     font-style: bold;
-    letter-spacing:0.3em;
+    letter-spacing:0.2em;
     margin-bottom:15px;
     text-shadow: 30px, 70px, 10px, black;
 }
 .banner p{
     color:white;
-    font-size: 1.5em;
+    font-size: 1em;
     opacity:0.6;
     text-shadow:20px,70px,5px, black;
     letter-spacing: 0.4em;
@@ -151,7 +151,7 @@ header {
 }
 .Portfolio>div>.item{
     width:90%;
-    /* margin:1%; */
+    margin:1%;
     padding-bottom:10px;
 }
 .contact>p{
@@ -197,6 +197,7 @@ header {
     margin-top:10%;
 }
 
+
 /* 테블릿 사이즈*/
 @media all and (min-width:768px) 
 {
@@ -216,6 +217,22 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;       
+    }
+    .banner h1{
+        color:white;
+        font-size:6em;
+        font-style: bold;
+        letter-spacing:0.2em;
+        margin-bottom:15px;
+        text-shadow: 30px, 70px, 10px, black;
+    }
+    .banner p{
+        color:white;
+        font-size: 1.7em;
+        opacity:0.6;
+        text-shadow:20px,70px,5px, black;
+        letter-spacing: 0.4em;
+    
     }
     .info>ul{
         display: flex;
@@ -253,7 +270,7 @@ header {
         
     }
     .Portfolio>div>.item{
-        width:50%;
+        width:30%;
         /* margin:1%; */
         padding-bottom:10px;
 }
