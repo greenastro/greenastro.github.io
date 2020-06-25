@@ -1,0 +1,19 @@
+@charset "utf-8";
+/*Header 관련*/
+
+nav { 
+    background-color: black;
+    opacity: 40%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    
+    margin: auto 30px;
+ }
