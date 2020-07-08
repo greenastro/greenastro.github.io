@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            position:relative;
+            overflow:hidden;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+        }
+        .container{
+            border:1px solid lime;
+            /* transform: translate(50%,50%); */
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            /* transform:rotate(-50deg) */
+        }
+        .container>div{
+            margin-bottom:20px;
+            width:100px;
+            height: 30px;
+            background: lightseagreen;
+        }
+        .container>div:nth-of-type(1){
+            transform:rotate(-45deg);
+        }
+        .container>div:nth-of-type(2){
+            transform: scale(2,4);
+        }
+        .container>div:nth-of-type(5){
+            transform: skew(20deg, 40deg);
+        }
+        
+        .container:hover{
+            top:50%
+            left:50%;
+        }
+            /* transition: 3s, height 1s; */
+            /* transition-property: all;
+            transition-duration: 3s; */
+            /* transition-timing-function:ease; */
+
+        }
+        /* .container>div:nth-child(1){
+            transition: all 3s linear transform 2s;
+            transition-timing-function: ease;
+        }
+         .container>div:nth-child(2){
+             transition-delay: 1s;
+            transition-timing-function: linear;
+        }  .container>div:nth-child(3){
+            transition-delay: 2s;
+            transition-timing-function: ease-in;
+        }  .container>div:nth-child(4){
+            transition-delay: 3s;
+            transition-timing-function: ease-in-out;
+        }  .container>div:nth-child(5){
+            transition-delay: 4s;
+            transition-timing-function: ease-out;
+        } */
+        .container:hover div{
+            width: 500px;
+            /* transform:rotate(30deg);
+            height: 200px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

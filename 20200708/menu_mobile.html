@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄버거메뉴 엑스메뉴로 변경</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            display: none;
+        }
+        body{
+            margin:50px auto;
+            display: flex;
+            justify-content: center;
+        }
+      label[for="menu"]{
+          display :block;
+          width: 100px;
+          height:100px;
+          /* border: 1px solid crimson; */
+          position: relative;
+        }
+
+      label[for="menu"] span{
+          /* display:block; */
+          width: 100%;
+          height: 5px;
+          background-color:crimson;
+          position: absolute;
+          left:0;
+          transition:1s;
+      }
+      label[for="menu"] span:nth-child(1){
+          top:0;
+
+      }
+
+      label[for="menu"] span:nth-child(2){
+          top:50%;
+
+      }
+      label[for="menu"] span:nth-child(3){
+          top:100%;
+
+      }
+
+      input[id="menu"]:checked + label[for="menu"] span:nth-child(1){
+          background-color:darkmagenta;
+          top:50%;
+          transform: rotate(45deg);
+      }
+      input[id="menu"]:checked + label[for="menu"] span:nth-child(3){
+          background-color:darkmagenta;
+          top:50%;
+          transform: rotate(-45deg);
+      }
+      input[id="menu"]:checked + label[for="menu"] span:nth-child(2){
+          background-color:transparent;
+          }
+     
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+    </form>
+</body>
+</html>

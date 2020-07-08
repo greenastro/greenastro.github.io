@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이콘</title>
+    <!---폰트어썸-->
+    <script src="https://kit.fontawesome.com/1bd41b8130.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        ul{
+            list-style: none;
+            margin-top: 50px;
+        }
+        a{
+            text-decoration: none;
+            color:violet;
+        }
+        ul>li{
+            display: inline-block;
+
+        }
+        ul>li>a{
+            /* background-color:paleturquoise; */
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height:100px;
+            border-radius: 50%;
+            font-size: 40px;
+
+            position: relative;
+            overflow:hidden;
+        }
+        ul>li>a::before{
+            content: "";
+            height: 100%;
+            width: 0%;
+            background-color: rebeccapurple;
+            
+            display: inline-block;
+           
+           position: absolute;
+           top:0;
+           left:0;
+           /* opacity: 0.3; */
+           transition:0.5s;
+           
+        }
+        ul>li>a:hover:before{
+            width:100%;
+        }
+        ul>li>a:hover{
+            color:paleturquoise;
+        }
+        ul>li>a:hover .fab{
+            transform:rotateY(360deg);
+        }
+        ul>li>a:hover .fas{
+            transform:rotateY(360deg);
+        }
+        ul>li>a .fab,.fas{
+            position:relative;
+            transition: 0.5s;            
+        }
+
+        
+     
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#"><i class="fab fa-twitter icon"></i>
+            </a>
+        </li>
+        <li><a href="#"><i class="fab fa-instagram icon"></i>
+            </a>
+        </li>
+        <li><a href="#"><i class="fab fa-facebook-f icon"></i>
+            </a>
+        </li>
+        <li><a href="#"><i class="fas fa-envelope icon"></i>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

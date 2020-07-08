@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TRANS</title>
+    <style>
+        #wrapper{
+            display: flex;
+            justify-content: center;
+            margin:100px;
+        }
+        #wrapper>div{
+            width: 100px;
+            /* height:100px; */
+           
+            border :2px solid pink;
+        }
+        .box1{
+            height:100px;
+           /* transition:2s; */
+            background-color : goldenrod;
+            animation-name: aniBox1;
+            animation-duration: 2s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            
+        }
+        .box1:hover{
+            animation-play-state: paused;
+        }
+        /* .box1:hover{
+            transform:scale(2);
+            background-color:cadetblue;
+            transition:2s;
+        }
+        .box2:hover{
+            transform:scale(2);
+            background-color:rgb(160, 95, 131);
+        }
+        .box3:hover{
+            transform:scale(2);
+            background-color:rgb(201, 241, 107);
+        } */
+        .box2{
+            height:100px;
+            background-color : rgb(66, 128, 66);
+        }
+        .box3{
+            height:100px;
+            
+            background-color : rgb(168, 168, 214);
+        }
+
+        @keyframes aniBox1{
+            /* 0%{
+
+            }
+            100%{
+
+            } */
+            from{
+                height: 100px;
+            }
+            50%{
+                background-color: cadetblue;
+                transform:rotate(30deg)
+            }
+            to{
+                height: 500px;
+                transform:rotate(360deg)
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        img{
+            width:150px;
+            height:150px;
+            box-sizing:border-box;
+        }
+
+        /* img:nth-child(1){
+            border:3px solid red;
+        } */
+        .newBorder{
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- //이미지 세개가 보여지게// -->
+    <div id="wrapper">
+        <img src="../20200624/images/0.jpg" class="newBorder" >
+        <img src="../20200624/images/1.jpg" >
+        <img src="../20200624/images/2.jpg">
+    </div>
+    <!-- //이미지 클릭시 빨간색 테두리가 보이도록 이벤트 등록// -->
+    <script src=".\java.js">
+        // let imgTag = document. querySelectorAll("img");
+        
+        // for(let i=0; i<imgTag.length; i++){
+        //     imgTag[i].addEventListener("click", function(e){
+        //         console.log("current=" + e.currentTarget);
+        //         console.log("target"+ e.target);
+        //         this.style.border = "3px solid red";
+        //     });
+        // }
+        // // let imgTag = document.querySelectorAll("img");
+
+        // // imgTag[0].addEventListener("click", function(){
+        // //     console.log(this);
+        // //     imgTag[0].style.border ="3px solid red";
+        // // });
+        // // imgTag[1].addEventListener("click", function(){
+        // //     console.log(this);
+        // //     imgTag[1].style.border ="3px solid red";
+        // // });
+        // // imgTag[2].addEventListener("click", function(){
+        // //     console.log(this);
+        // //     imgTag[2].style.border ="3px solid red";
+        // // });
+    </script>
+    
+</body>
+</html>
