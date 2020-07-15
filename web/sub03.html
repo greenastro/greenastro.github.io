@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/reset.css" type="text/css" rel="stylesheet">
+    <link href="CSS/style03.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1bd41b8130.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">EUN<span>J</span>IN</a>
+        </div>
+        <nav>
+            <input type="checkbox" id="m">
+            <label for="m">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul  class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="sub01.html">ABOUT</a></li>
+                <li><a href="sub02.html">PORTFOLIO</a></li>
+                <li><a href="sub03.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+    </section>
+    <section class="contact">
+        <h2 class="sub_title">Contact</h2>
+        <p>WebPublisher Lee Eunjin</p><br>
+        <div class="text">
+            <P>
+                안녕하세요. 이은진 입니다.
+            </P>
+            <p>
+                궁금한 사항을 메일로 문의해 주시면 <br>
+                빠른시일내에 답변 드리도록 하겠습니다.
+            </p>
+            <p>
+                감사합니다.
+            </p>
+        </div>
+         <ul>
+             <li><a href="#"><i class="fab fa-twitter icon"></i></a></li>
+             <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
+             <li><a href="#"><i class="fab fa-facebook-f icon"></i></a></li>
+             <li><a href="#"><i class="fas fa-envelope icon"></i></a></li>
+         </ul>
+         <div class="map">
+             <img src="images/"
+         </div>
+    </section>
+    <footer class="footer">
+        <p> E-mail: greenastro@naver.com</p>
+        <p>copyright@ 2020 by LEE Eunjin All rights Reserved</p>
+    </footer>
+    <script>
+        $(function(){
+            /*제이쿼리 소스 기재*/
+            $(".logo>button").click(function(){
+                $(".menu").slideToggle();
+            })
+        });
+    </script>
+</body>
+</html>

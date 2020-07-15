@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/reset.css" type="text/css" rel="stylesheet">
+    <link href="CSS/style02.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1bd41b8130.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+    <style>
+        .modal{
+            display: none;
+
+            width:100%;
+            height:100vh;
+            background-color: rgba(0,0,0,0.7);
+            position: fixed;
+            top: 0;
+            left:0;
+
+            z-index: 20;
+        }
+        .close{
+            color:white;
+            font-size: 50px;
+            position: absolute;
+            top: 20px;
+            right:50px;
+            cursor: pointer;   
+        }
+
+        .modal-content{
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            margin:100px auto;
+            animation: zoom 0.5s;
+        }
+        /*이미지 클릭시 이미지가 팝업되는 효과*/
+        @keyframes zoom {
+            0%{
+                transform: scale(100);
+               }
+               100%{
+                   transform: scale(10);
+               }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">EUN<span>J</span>IN</a>
+        </div>
+        <nav>
+            <input type="checkbox" id="m">
+            <label for="m">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul  class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="sub01.html">ABOUT</a></li>
+                <li><a href="sub02.html">PORTFOLIO</a></li>
+                <li><a href="sub03.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+    </section>
+    <section class="Portfolio">
+        <h2 class="sub_title">Portfolio</h2>
+        <p>WebPublisher Lee Eunjin</p><br>
+
+        <!-- 이미지 슬라이드 -->
+        <input type="radio" name="tab" id="tab1" checked>
+        <input type="radio" name="tab" id="tab2">
+        <input type="radio" name="tab" id="tab3">
+        <div class="tab_btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+        </div>
+        
+        
+        <ul>
+            <li>
+                <img class="item" src="images/p2.JPG">
+                <img class="item" src="images/p4.JPG">
+                <img class="item" src="images/p9.JPG">
+            </li>
+            <li>
+                <img class="item" src="images/p7.JPG">
+                <img class="item" src="images/p5.JPG">
+                <img class="item" src="images/p8.JPG">
+            </li>
+            <li>
+                <img class="item" src="images/p1.JPG">
+                <img class="item" src="images/p6.JPG">
+                <img class="item" src="images/p3.JPG">               
+            </li>       
+        </ul>
+    </section>
+    <!---THE MODAL-->
+    <div class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" src="images/p2.JPG"/>
+    </div>
+    <footer class="footer">
+        <p> E-mail: greenastro@naver.com</p>
+        <p>copyright@ 2020 by LEE Eunjin All rights Reserved</p>
+    </footer>
+    <script>
+        const imgItem = document.querySelector(".Portfolio");
+        
+        const modalTag = document.querySelector(".modal");
+
+
+        imgItem.addEventListener("click",function(e){
+            //this,current target,target
+            // console.log(e);
+          let targetSrc = e.target.getAttribute("src");
+             if( targetSrc == null) return;
+            // console.log(targetSrc);
+            //모달의 display 를 block으로 
+            modalTag.style.display="block";
+            modalTag.children[1].src = targetSrc;
+        });
+
+        const closeBtn = modalTag.children[0];
+        closeBtn.addEventListener("click",function(){
+            modalTag.style.display = "none";
+        });
+    </script>
+</body>
+</html>

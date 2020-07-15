@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/reset.css" type="text/css" rel="stylesheet">
+    <link href="CSS/style01.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1bd41b8130.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">EUN<span>J</span>IN</a>
+        </div>
+        <nav>
+            <input type="checkbox" id="m">
+            <label for="m">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul  class="menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="sub01.html">ABOUT</a></li>
+                <li><a href="sub02.html">PORTFOLIO</a></li>
+                <li><a href="sub03.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+    </section>
+    <section class="about">
+        <h2 class="sub_title">About</h2>
+        <p>WebPublisher Lee Eunjin</p><br>
+        <div class="text">
+            <P>안녕하세요. 웹퍼블리셔 이은진입니다.<br>
+                저의 포트폴리오 사이트를 방문해 주셔서 감사드립니다.</p>
+            <p>
+                저는 웹디자이너로써 단순히 홈페이지를 디자인하고 구축하는 디자이너이기보다는<br>
+                시대의 흐름과 IT분야의 동향에 따라 빠르게 접근하고 변화하는 크리에이티브한 웹디자이너가 되기 위해 항상 노력하고 있으며,<br> 
+                다양한 웹 브라우저가 해석할수 있는 그래픽과 사용자 인터페이스를 보여주기에 알맞은 마크업 언어 형식에 대한 지식을 갖추고<br> 
+                컨텐츠 전달의 개념을 정확하고 계획적으로 기획하여,<br> 
+                최적화된 인터페이스를 만들어 나아가기 위해 언제나 노력하고 있습니다.<br>
+            </p>
+        </div>  
+    </section>
+    <section class="info">
+        <input type="radio" name="tab" id="tab1" checked>
+        <input type="radio" name="tab" id="tab2">
+        <input type="radio" name="tab" id="tab3">
+        <div class="tab_btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+        </div>
+       <ul>
+        <li>
+            <div>H.</div>
+            <h3>HOMEPAGE</h3>
+             <p>
+                 디자인 시안 작업을 포함하여 반응형웹, 모바일웹 등의 플랫폼에 최적화된 홈페이지 디자인 작업 및 웹프로그램 개발까지 고객이 원하는 전략에 충실하게 수행하여 성공적인 디자이너가 되도록 최선을 다하고 있습니다.
+            </p>
+        </li>
+        <li>
+            <div>P.</div>
+            <h3>PUBLISHING</h3>
+            <p> 
+                Creative Design(Web/Mobile, UX/UI) HTML5 / CSS3 웹표준, 모바일웹 퍼블리싱 웹프로그램 개발, 웹프로모션 컨설팅 홈페이지 유지보수/관리
+            </p>
+        </li>
+        <li>
+            <div>B.</div>
+            <h3>BRANDING</h3>
+            <p>
+                풍부한 온라인 마케팅 경험과 역량을 바탕으로 통합 웹서비스를 제안드리며, 창의적인 발상과 폭 넓은 네트워크를 기반하여 다양한 전문분야의 효과적인 Creative Design 방법론을 제안합니다.
+            </p>
+        </li>
+    </ul>
+    </section>
+    <footer class="footer">
+        <p> E-mail: greenastro@naver.com</p>
+        <p>copyright@ 2020 by LEE Eunjin All rights Reserved</p>
+    </footer>
+    <script>
+        $(function(){
+            /*제이쿼리 소스 기재*/
+            $(".logo>button").click(function(){
+                $(".menu").slideToggle();
+            })
+        });
+    </script>
+</body>
+</html>

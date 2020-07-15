@@ -10,23 +10,75 @@
         <script src="js/jquery-3.5.1.js"></script>
         <title>Portfolio</title>
         <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+        <style>
+            .modal{
+                display: none;
+
+                width:100%;
+                height:100vh;
+                background-color: rgba(0,0,0,0.7);
+                position: fixed;
+                top: 0;
+                left:0;
+
+                z-index: 20;
+            }
+            .close{
+                color:white;
+                font-size: 50px;
+                position: absolute;
+                top: 20px;
+                right:50px;
+                cursor: pointer;   
+            }
+
+            .modal-content{
+                display: block;
+                width: 100%;
+                max-width: 600px;
+                margin:100px auto;
+                animation: zoom 0.5s;
+            }
+            /*이미지 클릭시 이미지가 팝업되는 효과*/
+            @keyframes zoom {
+                0%{
+                    transform: scale(100);
+                   }
+                   100%{
+                       transform: scale(10);
+                   }
+            }
+
+        </style>
     </head>
     <body>
         <header class="header">
             <div class="logo">
                 <a href="index.html">EUN<span>J</span>IN</a>
-                <button type="button">
-                    <i class="fas fa-bars"></i>
-                </button>
+            <!-- <button class="button"> -->
+              <!-- <button type="button"> -->
+                             <!-- <i class="fas fa-bars"></i> -->          
+     
+            <!-- </button> -->
             </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">PORTFOLIO</a></li>
-                    <li><a href="#">CONTACT</a></li>
+            <!-- <div class="openmenu"> -->
+            
+        <!-- </div> -->
+            <nav>
+                <input type="checkbox" id="m">
+                <label for="m">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul  class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sub01.html">ABOUT</a></li>
+                    <li><a href="sub02.html">PORTFOLIO</a></li>
+                    <li><a href="sub03.html">CONTACT</a></li>
                 </ul>
             </nav>
+      
         </header>
 
         <section class="banner">
@@ -34,6 +86,14 @@
             <P>WebPublisher Lee Eunjin</P>
         </section>
         <section class="info">
+         <input type="radio" name="tab" id="tab1" checked>
+         <input type="radio" name="tab" id="tab2">
+         <input type="radio" name="tab" id="tab3">
+         <div class="tab_btn">
+             <label for="tab1"></label>
+             <label for="tab2"></label>
+             <label for="tab3"></label>
+         </div>
         <ul>
             <li>
                 <div>H.</div>
@@ -62,7 +122,7 @@
             <h2 class="sub_title">Portfolio</h2>
             <p>WebPublisher Lee Eunjin</p><br>
             <div>
-                    <!-- <!-- <img class="item" src="images/p2.JPG" width="308" height="210">
+                    <!--  <img class="item" src="images/p2.JPG" width="308" height="210">
                     <img class="item"  src="images/p4.JPG" width="308" height="275">
                     <img class="item" src="images/p9.JPG" width="308" height="235">
                     <img class="item" src="images/p7.JPG" width="356" height="282">
@@ -83,8 +143,12 @@
                 <img class="item" src="images/p6.JPG">
                 <img class="item" src="images/p3.JPG">               
              </div>
-
         </section>
+        <!---THE MODAL-->
+        <div class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" src="images/p2.JPG"/>
+        </div>
         <section class="contact">
             <h2 class="sub_title">Contact</h2>
             <p>WebPublisher Lee Eunjin</p><br>
@@ -106,18 +170,41 @@
                  <li><a href="#"><i class="fab fa-facebook-f icon"></i></a></li>
                  <li><a href="#"><i class="fas fa-envelope icon"></i></a></li>
              </ul>
-
         </section>
+        
         <footer class="footer">
             <p> E-mail: greenastro@naver.com</p>
             <p>opyright@ 2020 by LEE Eunjin All rights Reserved</p>
         </footer>
-        <script>
+        <!-- <script>
             $(function(){
                 /*제이쿼리 소스 기재*/
                 $(".logo>button").click(function(){
                     $(".menu").slideToggle();
                 })
+            });
+        </script> -->
+
+        <script>
+            const imgItem = document.querySelector(".Portfolio");
+            
+            const modalTag = document.querySelector(".modal");
+
+
+            imgItem.addEventListener("click",function(e){
+                //this,current target,target
+                // console.log(e);
+              let targetSrc = e.target.getAttribute("src");
+                 if( targetSrc == null) return;
+                // console.log(targetSrc);
+                //모달의 display 를 block으로 
+                modalTag.style.display="block";
+                modalTag.children[1].src = targetSrc;
+            });
+
+            const closeBtn = modalTag.children[0];
+            closeBtn.addEventListener("click",function(){
+                modalTag.style.display = "none";
             });
         </script>
     </body>

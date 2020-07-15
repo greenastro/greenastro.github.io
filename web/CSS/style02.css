@@ -1,0 +1,376 @@
+﻿@charset "utf-8";
+body{font-family: 'Do Hyeon', sans-serif;}
+/*Header 관련*/
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    font-family: 'Faster One', cursive;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /*햄버거메뉴*/
+    position: relative;  
+    margin-top: 5px;
+    padding: 10px; 
+}
+.logo>a{
+    font-size:30px;
+    color:rgb(157,178,163);
+}
+.logo>a>span {color:rgb(40,224,70);}
+
+
+/* //햄버거메뉴 엑스// */
+input{
+    display:none;
+}
+
+label[for="m"]{
+    display:block;
+    width:50px;
+    height:40px;
+    position: relative;
+  
+}
+
+label[for="m"] span{
+    width:100%;
+    height:8px;
+    background-color:rgb(157,178,163);
+    position: absolute;
+    transition:1s;
+        
+}
+label[for="m"] span:nth-child(1){
+    top:0; 
+}
+label[for="m"] span:nth-child(2){
+    top:50%;
+}
+label[for="m"] span:nth-child(3){
+    top:100%;
+}
+input[id="m"]:checked + label[for="m"] span:nth-child(1){
+    background-color: rgb(78, 81, 255);
+    top:50%;
+    transform: rotate(45deg);
+}
+input[id="m"]:checked + label[for="m"] span:nth-child(3){
+    background-color: rgb(78, 81, 255);
+    top:50%;
+    transform: rotate(-45deg);
+}
+input[id="m"]:checked + label[for="m"] span:nth-child(2){
+    background-color:transparent;
+    }
+input[id="m"]:checked ~ .menu{
+    display: block;
+}
+
+.menu{
+    display:none;
+    letter-spacing: 10px;
+    line-height: 50px;
+    position: absolute;
+    left:0;
+    top:55px;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+
+}
+.menu a{    
+    color:rgb(157,178,163);
+    padding:15px;
+    padding-bottom: 0;
+    font-weight: bolder; 
+    /*메뉴글씨에 밑줄효과*/
+    position: relative;    
+}
+.header ul>li>a:hover{
+    color:rgb(78, 81, 255);
+}
+.header ul>li>a::before{
+    content: "";
+    background-color: rgb(40,224,70);
+    display: inline-block;
+
+    height:4px;
+    width:0px;
+
+    position: absolute;
+
+    bottom:-10px;
+    transition: all 0.3s;
+
+    left:50%;
+    transform: translateX(-50%);
+}
+.header ul>li>a:hover::before{
+    padding-top:0;
+    margin-top:0;
+    width:100%;
+    
+}
+
+/*배너관련*/
+.banner{
+    background-image: linear-gradient(rgba(148, 209, 158, 0.342),rgba(87, 187, 127, 0.342)), url('../images/mainbanner.jpg');
+    background-position:center;
+    background-size: cover;
+
+    height:150px;
+    width: 100%;
+    
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+
+.sub_title{
+    color: rgb(40,224,70);
+    font-size:50px;
+    margin:50px auto 0px auto;
+    padding-top:30px;
+    text-align: center;
+
+    width: 100%;
+}
+/*portfolio 사진 슬라이드 효과 줘서 3개만 보이게*/
+.Portfolio> .tab_btn{
+    text-align:center;
+}
+/* 라디오 버튼 css*/
+.Portfolio>.tab_btn > label{
+    display: inline-block;
+    width:20px;
+    height:10px;
+    border-radius: 40px;
+    background-color:rgb(141, 245, 167);
+
+}
+/*라디오모양 버튼 감추기*/
+.Portfolio>input [name="tab"]{
+    display:none;
+}
+/*라디오버튼이랑 바모양이랑 연결시키기*/
+.Portfolio>input[id="tab1"]:checked ~ .tab_btn label[for="tab1"],
+.Portfolio>input[id="tab2"]:checked ~ .tab_btn label[for="tab2"],
+.Portfolio>input[id="tab3"]:checked ~ .tab_btn label[for="tab3"]
+{
+    background-color: rgb(78, 81, 255);
+}
+
+
+/*Portfolio*/
+
+.Portfolio{
+    width:100%;
+    background-color:white;
+
+}
+.Portfolio>p{
+    margin:10px auto;
+    text-align: center;
+    color:rgb(66,94,72);
+    
+}
+/* .Portfolio>ul{
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 50px auto;
+    align-items: flex-start;
+    
+} */
+
+.Portfolio>ul{
+    width: 500px;
+    height: 1200px;
+    margin:20px auto;
+    position: relative;
+    left:0;
+    transition: 1s;
+    overflow: hidden;
+     
+}
+.Portfolio>ul>li{
+    width:500px;
+    height: 1200px;
+    padding-bottom:20px;
+    /* position: absolute;
+    float: left;
+} */
+
+.Portfolio>input[id="tab2"]:checked ~ ul{
+    left: -700px;
+}
+.info>input[id="tab3"]:checked ~ul{
+    left: -1400px;
+}
+
+
+.footer{
+    width:100%;
+    height: 10%;
+    font-size:15px;
+    background-color:rgb(215,215,215);
+    color:rgb(157,178,163);
+    /* text-align: center; */
+}
+
+
+
+
+
+
+
+
+
+/* 테블릿 사이즈*/
+
+@media all and (min-width:768px) 
+{
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .logo{
+        font-family: 'Faster One', cursive;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo>a{
+        font-size:30px;
+        color:rgb(157,178,163);
+    }
+    .logo>a>span {color:rgb(40,224,70);}
+
+ /*태블릿 사이즈에선 버튼이 안보이게*/
+ label[for="m"] {
+    display:none;
+}
+ input{
+        display:none;
+    }
+    
+    .menu{
+        margin-top: 40px;
+        display:flex;
+        justify-content:flex-end;
+        letter-spacing: 10px;
+        line-height: 50px;
+    }
+   
+    .Portfolio{
+        width:100%;
+        background-color: rgb(215,215,215);
+    }
+    .Portfolio>p{
+        margin:10px auto;
+        text-align: center;
+        color:rgb(66,94,72);
+        
+    }
+    .Portfolio>div{
+        /* width:700px;
+        margin:30px auto;
+        display: flex; */
+        /* box-sizing: border-box;
+        padding:10px;
+        max-width:700px;
+        margin : 0 auto;
+        height: 470px;
+        display: flex;
+        flex-flow:column wrap;
+        align-items:flex-start; */
+        width: 90%;
+        display: flex;
+       
+        margin: 0px auto;
+        align-items: flex-start;
+        
+    }
+    .Portfolio>div>.item{
+        width:30%;
+        /* margin:1%; */
+        padding-bottom:10px;
+    }
+}
+
+
+
+
+/* PC용 사이즈*/
+@media all and (min-width:1024px) 
+{
+     /*PC 사이즈에서 버튼이 안보이게*/
+ label[for="m"] {
+    display:none;
+    }
+
+    .header{
+        width: 1024px;
+        margin: 0 auto;
+        display:flex;
+        justify-content: space-between;
+        font-size:30px;
+     
+    }
+  
+    .logo>a{
+        font-size:55px;
+        color:rgb(157,178,163);
+    
+      
+    }
+
+    .menu{
+        margin-top: 0px;
+        width: 100%;
+        line-height: 50px;
+  
+    }
+    .banner{
+        height: 150px;
+    }
+
+.sub_title{
+    color: rgb(40,224,70);
+    font-size:90px;
+    margin:90px auto 0px auto;
+    padding-top:90px;
+    text-align: center;
+
+    width: 100%;
+}
+.Portfolio> .tab_btn{
+    display: none;
+    }
+    
+.Portfolio>.tab_btn > label{
+        display: none;
+       
+    }
+.Portfolio>input [name="tab"]{
+    display:none;
+}
+
+    
+    .footer{
+        width:100%;
+        height:10vh;
+        font-size:25px;
+        background-color:rgb(215,215,215);
+        color:rgb(157,178,163);
+        text-align: center;
+        margin-top:10%;
+    }
+}
