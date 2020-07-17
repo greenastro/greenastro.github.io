@@ -141,118 +141,138 @@ input[id="m"]:checked ~ .menu{
 
     width: 100%;
 }
-/*about글귀*/
-.text{
-    margin-top:100px;
-    font-size: 20px;
-    width: 100%;
-    text-align: center;
-    line-height: 40px;
-    color:rgb(66,94,72);
-}
-p{
+
+.contact>p{
+    margin:10px auto;
     text-align: center;
     color:rgb(66,94,72);
 }
-/*info H,P,B 소개글*/
-
-.info> .tab_btn{
-    text-align:center;
-}
-
-.info>.tab_btn > label{
-    display: inline-block;
-    width:20px;
-    height:10px;
-    border-radius: 40px;
-    background-color:rgb(141, 245, 167);
-
-}
-
-.info>input [name="tab"]{
-    display:none;
-}
-/*라디오버튼이랑 바모양이랑 연결시키기*/
-.info>input[id="tab1"]:checked ~ .tab_btn label[for="tab1"],
-.info>input[id="tab2"]:checked ~ .tab_btn label[for="tab2"],
-.info>input[id="tab3"]:checked ~ .tab_btn label[for="tab3"]
-{
-    background-color: rgb(78, 81, 255);
-}
-
-
-
-
-.info{
-    /* width: 70%;
-    margin: 50px auto; */
-
-    width:300px;
-    margin: 30px auto;
-    overflow: hidden;
-}
-.info>ul{
-     /* display: flex;  */
-    /*flex-direction: column; */
-    width: 900px;
-    height: 400px;
-    margin-top:20px;
-    position: relative;
-    left: 0;
-    transition: 1s;
-}
-.info>ul>li{
-    width: 300px;
-    float: left;
-}
-.info>input[id="tab2"]:checked ~ ul{
-    left: -300px;
-}
-.info>input[id="tab3"]:checked ~ ul{
-    left: -600px;
-}
-
-
-.info>ul>li>div{    
-        background-color:rgb(203,228,199);
-        color:rgb(40,224,70);
-    
-        font-size:60px;
-        border-radius: 64.3px 10.87px 75.49px 29.7px;
-    
-         width:2em;
-         height:2em;
-         text-align:center;
-         line-height:2em;
-         margin: 10px auto;
-    
-         /* margin-right: 230px;
-         margin-left: 200px; */
-}
-.info>ul>li>h3{
-    font-size:30px;
-    color:rgb(40,224,70);
+.contact>.text{
+    /*모바일에선 글씨 안보이게*/
+    display: none;
+    margin:50px auto;
     text-align: center;
-}
-.info>ul>li>p{
-    /* width: 80%; */
-    margin: 30px auto;
     color:rgb(66,94,72);
     line-height:25px;
     letter-spacing: 1px;
+
 }
+.contact>ul{
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+
+ 
+}
+/*컨텍트 요소 만들기, html에 icon 클래스 주고나서*/
+.contact .icon{
+    /* background-color:rgb(203,228,199);
+    color:white; */
+
+    font-size:45px;
+    border-radius: 64.3px 10.87px 75.49px 29.7px;
+
+     width:100px;
+     height:70px;
+     text-align: center;
+     padding-top: 25px;
+     
+     margin-right:20px;
+
+     position: relative;
+
+}
+
+.contact>ul>li>a{    
+display: inline-block;
+width:100px;
+/* height:100px; */
+
+text-align: center;
+/* line-height:100px; */
+border-radius: 64.3px 10.87px 75.49px 29.7px;
+font-size: 45px;
+
+position: relative;
+overflow: hidden;
+
+background-color:rgb(203,228,199);
+color:white;
+/* color:#f3d217; */
+
+}
+
+
+.contact>ul>li>a:before{
+    content: "";
+    background-color:rgb(141, 245, 167);
+  
+
+    font-size:40px;
+    border-radius: 64.3px 10.87px 75.49px 29.7px;
+
+     width:0;
+     height:70px;
+     text-align:center;
+     padding-top: 25px;
+
+
+     margin-right:20px;
+
+     position: absolute;
+     top: 0;
+     left: 0;
+
+     transition: 0.5s;
+    
+}
+
+
+
+.contact>ul>li>a:hover:before{
+   width:100%;
+    height:100%;
+  
+ 
+}
+
+.contact>ul>li>a:hover .fab{
+    transform:rotateY(360deg);
+    color: rgb(78, 81, 255);
+   
+}
+.contact>ul>li>a:hover .fas{
+    transform:rotateY(360deg);
+    color:rgb(247, 231, 56);
+
+}
+.contact>ul>li>a .fab,.fas{
+    position:relative;
+    transition: 1s;            
+}
+
+   
+/*지도 크기, 위치 설정*/
+.map{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    margin-top: 50px;
+}
+
+
 
 .footer{
     width:100%;
-    height: 10%;
-    font-size:15px;
+    font-size:25px;
     background-color:rgb(215,215,215);
     color:rgb(157,178,163);
-    /* text-align: center; */
+    text-align: center;
+    margin-top:10%;
 }
-
-
-
 
 
 
@@ -289,29 +309,12 @@ p{
     }
     
     .menu{
-        margin-top: 40px;
-        display:flex;
-        justify-content:flex-end;
-        letter-spacing: 10px;
-        line-height: 50px;
-    }
-        
-    .banner h1{
-        color:white;
-        font-size:6em;
-        font-style: bold;
-        letter-spacing:0.2em;
-        margin-bottom:15px;
-        text-shadow: 30px, 70px, 10px, black;
-    }
-    .banner p{
-        color:white;
-        font-size: 1.7em;
-        opacity:0.6;
-        text-shadow:20px,70px,5px, black;
-        letter-spacing: 0.4em;
-    
-    }
+            margin-top: 0px;
+            display: flex;
+            justify-content:flex-end;
+            letter-spacing: 10px;
+            line-height: 50px;
+        }
 
     /* */
    .info{
@@ -328,44 +331,7 @@ p{
         justify-content:space-between;
     
     }
-    .Portfolio{
-        width:100%;
-        background-color: rgb(215,215,215);
-    }
-    .Portfolio>p{
-        margin:10px auto;
-        text-align: center;
-        color:rgb(66,94,72);
-        
-    }
-    .Portfolio>div{
-        /* width:700px;
-        margin:30px auto;
-        display: flex; */
-        /* box-sizing: border-box;
-        padding:10px;
-        max-width:700px;
-        margin : 0 auto;
-        height: 470px;
-        display: flex;
-        flex-flow:column wrap;
-        align-items:flex-start; */
-        width: 90%;
-        display: flex;
-       
-        margin: 0px auto;
-        align-items: flex-start;
-        
-    }
-    .Portfolio>div>.item{
-        width:30%;
-        /* margin:1%; */
-        padding-bottom:10px;
-    }
-}
-
-
-
+  
 
 /* PC용 사이즈*/
 @media all and (min-width:1024px) 
@@ -392,84 +358,17 @@ p{
     }
 
     .menu{
-        margin-top: 0px;
+        margin: 25px auto;
         width: 100%;
         line-height: 50px;
   
     }
     .banner{
-        height: 150px;
+        height: 300px;
     }
 
 
-/* info H,P, B 소개글*/
-    
-    .info>ul{
-        width: 900px;
-        margin-top: 100px;
-    }
-    .info>ul>li{
-        text-align: center;
-        width:900px;
-    }
-    
-    .info> .tab_btn{
-    display: none;
-    }
-    
-    .info>.tab_btn > label{
-        display: none;
-       
-    }
-    
-    .info>input [name="tab"]{
-        display:none;
-    }
-          
-    .info{
-        width:75%;
-        height:70vh;
-        margin: 30px auto;
-        /* overflow: hidden; */
-    }
-    
-    
-.info>ul>li>div{    
-            display: block;
-    }
-.info>ul>li>h3{
-        font-size:30px;
-        color:rgb(40,224,70);
-        text-align: center;
-    }
-.info>ul>li>p{
-        /* width: 80%; */
-        margin: 30px auto;
-        color:rgb(66,94,72);
-        line-height:25px;
-        letter-spacing: 1px;
-    }
 
-.info>ul>li {
-    width: 100%;
-    margin: 50px auto;
-    
-}
-
-
-.info>ul>li>h3{
-    font-size:50px;
-    color:rgb(40,224,70);
-    text-align: center;
-}
-.info>ul>li>p{
-    font-size:2em;
-    width: 390px;
-    margin: 40px 50px;
-    color:rgb(66,94,72);
-    line-height:35px;
-    /* letter-spacing: 1px; */
-}
 .sub_title{
     color: rgb(40,224,70);
     font-size:90px;
@@ -480,7 +379,17 @@ p{
     width: 100%;
 }
 
-    
+.contact>.text{
+    /*PC에선 보이게*/
+    display: block;
+    font-size: 30px;
+    margin:50px auto;
+    text-align: center;
+    color:rgb(66,94,72);
+    line-height:50px;
+    letter-spacing: 1px;
+
+    }
     .footer{
         width:100%;
         height:10vh;

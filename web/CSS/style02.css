@@ -196,8 +196,7 @@ input[id="m"]:checked ~ .menu{
     position: relative;
     left:0;
     transition: 1s;
-    overflow: hidden;
-     
+    overflow: hidden;    
 }
 .Portfolio>ul>li{
     width:500px;
@@ -207,7 +206,10 @@ input[id="m"]:checked ~ .menu{
     float: left;
 } */
 
-.Portfolio>input[id="tab2"]:checked ~ ul{
+.portfolio>input[id="tab1"]:checked ~ .tab_btn label[for="tab1"],
+.portfolio>input[id="tab2"]:checked ~ .tab_btn label[for="tab2"],
+.portfolio>info>input[id="tab3"]:checked ~ .tab_btn label[for="tab3"]
+{
     left: -700px;
 }
 .info>input[id="tab3"]:checked ~ul{
@@ -223,7 +225,7 @@ input[id="m"]:checked ~ .menu{
     color:rgb(157,178,163);
     /* text-align: center; */
 }
-
+                                 
 
 
 
@@ -262,7 +264,7 @@ input[id="m"]:checked ~ .menu{
     }
     
     .menu{
-        margin-top: 40px;
+        margin-top: 0px;
         display:flex;
         justify-content:flex-end;
         letter-spacing: 10px;
@@ -279,7 +281,11 @@ input[id="m"]:checked ~ .menu{
         color:rgb(66,94,72);
         
     }
-    .Portfolio>div{
+    .Portfolio>ul> li{
+        display: inline;
+
+    }
+    .Portfolio>ul{
         /* width:700px;
         margin:30px auto;
         display: flex; */
@@ -292,10 +298,10 @@ input[id="m"]:checked ~ .menu{
         flex-flow:column wrap;
         align-items:flex-start; */
         width: 90%;
-        display: flex;
+        /* display: flex; */
        
         margin: 0px auto;
-        align-items: flex-start;
+        /* align-items: flex-start; */
         
     }
     .Portfolio>div>.item{
@@ -333,13 +339,13 @@ input[id="m"]:checked ~ .menu{
     }
 
     .menu{
-        margin-top: 0px;
+        margin-top: 25px;
         width: 100%;
         line-height: 50px;
   
     }
     .banner{
-        height: 150px;
+        height: 300px;
     }
 
 .sub_title{

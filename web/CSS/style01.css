@@ -287,15 +287,15 @@ p{
  input{
         display:none;
     }
-    
+ 
     .menu{
-        margin-top: 40px;
-        display:flex;
+        margin-top: 0px;
+        display: flex;
         justify-content:flex-end;
         letter-spacing: 10px;
         line-height: 50px;
     }
-        
+   
     .banner h1{
         color:white;
         font-size:6em;
@@ -392,13 +392,13 @@ p{
     }
 
     .menu{
-        margin-top: 0px;
+        margin-top: 25px;
         width: 100%;
         line-height: 50px;
   
     }
     .banner{
-        height: 150px;
+        height: 300px;
     }
 
 
