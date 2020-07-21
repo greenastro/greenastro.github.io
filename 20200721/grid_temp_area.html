@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grud Tenokate Area</title>
+    <style>
+        .item{
+            border : 5px solid darkgoldenrod;
+        }
+        .container{
+            width:100vw;
+            height:100vh;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows:repeat(3,1fr);
+            grid-template-areas: 
+                "header header header"
+                "main main aside"
+                ". footer footer";
+        }
+        /*위에  header header header 라고 적은 부분이랑 연결해주기*/
+        .item:nth-child(1){
+            grid-area: header;
+        }
+        .item:nth-child(2){
+            grid-area: main;
+        }
+        .item:nth-child(3){
+            grid-area: aside;
+        }
+        .item:nth-child(4){
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">HEADER</div>
+        <div class="item">MAIN</div>
+        <div class="item">ASIDE</div>
+        <div class="item">FOOTER</div>
+    </div>
+</body>
+</html>

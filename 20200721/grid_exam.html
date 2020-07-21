@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid example</title>
+    <style>
+        /*스크롤 안생기게*/
+        *
+        .item{
+            border:2px solid palegoldenrod;
+            background:palevioletred;
+        }
+        .item:nth-child(odd){
+            background-color:seagreen;
+        }
+        .container{
+            display: grid;
+            font-size: 30px;
+            /*열을 기준으로 grid 사용__
+            3개의 열을 만들건데 열하나의 너비가 100px임*/
+            /* grid-template-columns: 100px 100px 100px; */
+            /*2개의 행을 100px로 만들기*/
+            /* grid-template-rows: 100px 100px; */
+            /*배경과 너비 값변경하여 컨테이너위치 확인*/
+            background-color: #eee;
+            /* width:600px; */
+            /*화면 전체에 위치하도록 한페이지 크기지정*/
+            width:100vw;
+            height:100vh;
+            /* 3칸이 윈도우창 전체에 나오도록 1fr을 사용*/
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /*grid 에서 1fr를 칸 갯수만큼 적지 않고 만드는 공식 _ 4개의 1fr경우*/
+            /* grid-template-columns: repeat(4,1fr); */
+            grid-template-columns : repeat(4,1fr);
+            /* grid-template-rows: repeat(3,1fr); */
+             /*아이템 간격 주기*/
+            /* grid-gap:10px; */
+            /*아이템 세로 간격*/
+             /* grid-column-gap:10px; */
+            /*아이템 가로 간격*/
+             grid-row-gap:10px;
+             /*일정간격 주기*/
+             grid-auto-rows: 100px;
+            
+        }
+        /* .item:nth-child(1){
+            grid-column: 1/ span 2;
+        }
+        .item:nth-of-type(2){                        
+            grid-column: 3 / span 2;
+            grid-row: 1 / span 2;            
+        } */
+
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+</body>
+</html>
