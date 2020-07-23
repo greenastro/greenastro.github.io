@@ -3,12 +3,9 @@
 .wrapper{
     width:100vw;
     height:100vh;
-
-    /*상위 속성에 3d효과 주기*/
+   /*상위 속성에 3d효과 주기*/
     perspective: 800px;
-   
 }
-
 /*햄버거 메뉴*/
 .btnMenu{
     display:none;
@@ -16,7 +13,7 @@
     width:50px;
     height:50px;
    /*스타일 지정*/
-   color:blueviolet;
+   color:wheat;
    font-size: 40px;
 
    /*맨 위로 이동*/
@@ -37,7 +34,7 @@
     width: 250px;
     height: 100%;
 
-    /*메인 메뉴 배경색*/
+    /*메뉴바 배경색*/
     background-color:#c4d7fa;
    
 
@@ -47,7 +44,7 @@
 
     /*3D 회전 설정*/
     opacity:1;
-    transform-origin:left center;
+    transform-origin: left center;
     transform: rotateY(20deg);
     transition: 1s;
 
@@ -71,7 +68,7 @@
 }
 
 /*왼쪽 메인바 안의 메뉴리스트*/
-.main-menu > .gnb {}
+/* .main-menu > .gnb{} */
 .main-menu > .gnb li{
     line-height: 4rem;
 }
@@ -91,7 +88,7 @@
     position:fixed;
     top:0;
     left:0;
-    z-index:1;
+    z-index: 1;
     /*크기지정*/
 
     width:100%;
@@ -99,5 +96,5 @@
 
     /*메인 화면 기울여주기*/    
     transform-origin: right center;
-    transform: rotateY(-20deg);
+    transform: rotateY(-10deg);
 }

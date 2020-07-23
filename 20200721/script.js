@@ -10,7 +10,7 @@
         let index = target.getAttribute("value");
         // console.log(typeof (index));찍어보면 index값타입이 string임.
         //우리는 숫자가 필요하므로
-        index= parseInt(index);
+        index = parseInt(index);
         // console.log(typeof(index));
         if( index>=0 || index<=2 ){
             //메인메뉴가 회전되면서 안보이게
