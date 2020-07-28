@@ -7,7 +7,7 @@
     width:100vw;
     height:100vh;
    /*상위 속성에 3d효과 주기*/
-    perspective: 800px;
+    perspective: 900px;
 }
 /*햄버거 메뉴*/
 .btnMenu{
@@ -107,8 +107,8 @@
     transform-origin: right center;
     /*움직임을 부드럽게*/
     transition:1s;
-
-
+    /* transform-style: preserve-3d;     */
+    perspective: 800px;
 }
 
 /*회전을 따로 뺴서 클래스를 추가*/
@@ -126,6 +126,8 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows:repeat(4,1fr); 
+
+    transform-style: preserve-3d;
  
 
 }
@@ -154,8 +156,8 @@
 .container>div:nth-child(2){
     background-color:bisque;
 }
-.container>div:nth-child(3){
-    background-color:black;
+.container>div:nth-child(3){    
+    /* background-color:black; */
 }
 
 /*Yannick*/
