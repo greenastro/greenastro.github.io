@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll down image animation</title>
+    <style>
+        body{
+            /* 컨텐츠들을 가운데로 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            height: 300vh;
+
+        }
+        hr{
+            margin-top: 200px;
+            width: 100%;
+            border: 2px solid #222;
+        }
+        img{
+            width: 500px;
+           visibility:hidden;
+             
+        }
+        /*이미지에 클래스 추가*/
+        .img-slide{
+            animation :slideUp 1s;
+            visibility:visible;
+        }
+            /*애니메이션 주기*/
+            @keyframes slideUp {
+                0%{
+                    opacity:0;
+                    /* 밑에서 올라오는 사진 효과 */
+                    transform:translateY(80%);
+                }
+                100%{
+                    opacity:1;
+                       /* 밑에서 올라오는 사진 효과 */
+                       transform:translateY(0%);
+                }
+            }
+    </style>
+</head>
+<body>
+        <h1>Scroll down & Event</h1>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aut officia voluptatem vero ad eum animi odit assumenda corporis dicta, facilis non fugiat eligendi maxime odio sunt praesentium magni dolorem.
+        </p>
+        <hr>
+        <div>
+        <img src="../20200630/images/5.jpg">
+        </div>
+        <script>
+        //     (function(){
+        //                const imgElem = document.querySelector("img");
+        //               const hrElem = document.querySelector("hr");
+        //               let yHeight = hrElem.offsetTop;
+
+        //                 function appear(){
+        //                         let posY = hrElem.getBoundingClientRect().top;
+        //                         if(window.pageYOffset >= yHeight){
+        //                         imgElem.classList.add("slide");               
+        //                          }
+        //                         else{
+        //                         imgElem.classList.remove("slide");
+        //                          }
+        //                      }
+        //                 window.addEventListener("scroll",function(){
+        //                 appear();
+                    
+        //             }); 
+                
+        // })();
+
+        //선생님풀이
+        (function(){
+
+            // 이미지에 클래스를 추가하기 위해 객체를 불러옴
+            const imgElem = document.querySelector("img");
+            //hr 정보가져오기
+            const hrElem = document.querySelector("hr");
+            const yHR = hrElem.offsetTop;
+            //위의 식을 하나로 쓰면  const yHR = document.querySelector("hr").offsetTop;
+            // console.log로 잘가져왔는지 확인
+            function slideFunction(){
+                //현재 스크롤 되고 있는 스크롤 값
+                let posY = window.pageYOffset;
+                if( posY >= yHR-80){
+                    //imgElem.classList.add("img-slide");
+                    imgElem.className="img-slide";
+
+                }
+            }
+            window.addEventListener("scroll", slideFunction);
+        })();
+        </script>
+</body>
+</html>

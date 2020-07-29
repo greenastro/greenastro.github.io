@@ -1,0 +1,102 @@
+<!-- 스크롤예제1 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll basic</title>
+    <style>
+        .output{
+            background-color:rgba(0,0,0,0.6);
+            color: #fff;
+            font-size:3rem;
+            position: fixed;
+            /*position을 이용하면 디스플레이 방식이 인라인블럭으로 바뀜 그래서 위드값 설정해줘야함*/
+            width: 100%;;
+        }
+        .content{
+            background-color: paleturquoise;
+            height:1000vh;
+            padding:20%;
+            /*box상자 글귀 아래 가운데로 맞추기*/
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box{
+            width:100px;
+            height: 100px;
+            background-color: purple;
+            margin:10%;
+            border-radius: 50%;
+            transform: 1s;
+        }
+        /*zoom 클래스 추가*/
+        .box.zoom{
+            transform: scale(2);
+
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="output">output</div>
+    <div class="content">
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam tenetur vitae corrupti facere! Recusandae unde officia incidunt totam. Officiis facere est nulla voluptatum modi consequuntur neque ex laboriosam aperiam consectetur.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eveniet similique magni dignissimos eaque blanditiis nostrum quo saepe eius voluptatum animi cum sequi, provident esse cupiditate impedit, commodi ex dolor!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptatem natus adipisci laudantium a earum magni debitis expedita suscipit totam amet, libero distinctio perspiciatis quidem maxime, quam alias? Repellat, quasi!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ducimus cumque ea repudiandae doloremque dignissimos velit blanditiis quaerat impedit rerum nesciunt architecto, reprehenderit laboriosam provident animi qui accusamus officiis alias.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed odit rem eos dignissimos quia ex illo incidunt, sequi dolores, quae maxime obcaecati. Nemo, magnam beatae. Dolorum numquam pariatur eos eum?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil deserunt odit vero illum quasi dolores accusantium reiciendis, necessitatibus a dolorem doloremque quo ducimus molestiae quas eveniet, sed voluptas. Assumenda, libero.
+        </div>
+        <div class="box"></div>
+    </div>
+    <script>
+        (function(){
+            //code
+            //output 수치를 나오게 하기위해서 아웃풋 객체를 가져옴
+            const outputElem = document.querySelector(".output");
+            //1.box가 0에서부터 얼마나 떨어져 있는지 알아보기 위해서 박스 객체를 가져옴
+            const boxElem = document.querySelector(".box");
+
+            // window.addEventListener("scroll", function(){
+            //     // console.log("onscroll");
+            //     // console.log(window.onscroll == document.body.onscroll);//true
+            //     //세로형 스크롤에 텍스트를 넣어주기 위해서 아래와같이
+            //     outputElem.innerHTML = window.pageYOffset;//스크롤이 얼마나 됐는지를 보여줌. 화면에 보여지는 부위+스크롤이 안된페이지=문서전체 높이
+            //     // console.log(window.innerHeight)
+            //     //box가 0에서부터 얼마나 떨어져있는지 output에 출력
+            //     outputElem.innerHTML = boxElem.offsetTop;
+            //     //box속성에대한 정보를 가져오기(스크롤이나 좌표값가져올떄 중요!!)
+            //     // console.log(boxElem.getBoundingClientRect())
+
+            //     });
+
+                //내가 해본거
+                // boxElem.addEventListener("scroll",function(){
+                //     boxElem.scrollTop == "101.609375";
+                //     boxElem.style.width == "200px";
+                //     boxElem.style.height == "200px";
+                // });
+
+                //선생님 풀이
+                function rectScale(){
+                    //박스 스크롤 속성중에 top 수치 가져오기
+                    let posY = boxElem.getBoundingClientRect().top;
+                    if( posY < window.innerHeight*0.2){
+                        boxElem.classList.add("zoom");
+                    }
+                    else{
+                        boxElem.classList.remove("zoom");
+                    }
+
+                }
+                window.addEventListener("scroll",function(){
+                    rectScale();
+                }); 
+                
+        })();
+    </script>
+</body>
+</html>

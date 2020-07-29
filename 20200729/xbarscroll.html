@@ -1,0 +1,86 @@
+ <!-- 스크롤 예제-3 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Indicator</title>
+    <style>
+        *{margin:0;  padding:0;}
+        body{
+            width:100%;
+            height:1000vh;
+            color:rgb(19, 63, 63);
+        }
+        header{
+            width: 100%;
+            height: 150px;
+            text-align:center;
+            font-size: 25px;
+            padding-top: 60px;
+            background-color: rgb(143, 240, 230);
+            color:rgb(19, 63, 63);
+            position: fixed;
+            top:0;
+         
+               }
+        .bar{
+            width: 100%;
+            height: 10px;
+            background-color: rgb(45, 189, 174);
+            margin-top:80px;
+        }
+        .fill_bar{
+            width:20%;
+            height: 10px;
+            background-color: teal;
+        }
+        
+        section{
+            margin:300px auto;
+            width: 70%;
+            height: 100%;          
+            
+        }
+        h2{
+            margin-top: 300px;
+        }
+        .text{
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Scroll Indicator</h1>
+    <div class="bar">
+        <div class="fill_bar"></div>
+    </div>
+    </header>  
+    <section>
+    <h2>Scroll Down to See The Effect</h2><br>
+    <div class="text">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, veniam, mollitia eius impedit maiores, deserunt provident vel quisquam obcaecati consequuntur exercitationem id. Illo ea ex voluptatem ipsum commodi! Sequi, expedita!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum iusto quidem veniam, id esse porro labore exercitationem repudiandae odit voluptate velit distinctio quasi vel ea eveniet quibusdam a cumque?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo soluta illo facere dolores, voluptatum ipsum. Repellendus, et ea cumque, delectus tempore rem molestias cupiditate odit quasi consectetur alias, incidunt animi?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, repudiandae ullam. Eaque, consequuntur eligendi, id totam laboriosam sint omnis doloremque consequatur quos accusamus cupiditate asperiores deleniti veniam minima, reiciendis qui?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates nesciunt quod reprehenderit corrupti temporibus hic ducimus odio error maiores, esse ipsam. Perferendis quod cupiditate a nulla dignissimos nobis nisi.
+    </div>
+    </section>
+    <script>
+        (function(){
+            function fillBarFunction(){
+                const fillElem = document.querySelector(".fill_bar");
+                let currentScroll = window.pageYOffset;
+                let bodyHeight = document.body.getBoundingClientRect().height - window.innerHeight;
+                let scrolled = (currentScroll / bodyHeight)* 100;
+                fillElem.style.width = scrolled + "%";
+            }
+            window.addEventListener("scroll", fillBarFunction);
+
+           
+        })();
+    </script>
+</body>
+</html>
