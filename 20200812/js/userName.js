@@ -19,9 +19,10 @@
         addForm.addEventListener("submit",handlerSubmit);
         //input
         const addInput = document.createElement("input");
+  
         addInput.type = "text";
         addInput.placeholder = "your name here";
-              
+        
         //element추가
         addForm.appendChild(addInput);
         userContainer.appendChild( addForm);
