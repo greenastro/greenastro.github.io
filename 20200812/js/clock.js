@@ -7,7 +7,7 @@
         const hours = date.getHours(); //시
         const minutes = date.getMinutes();//분
         const seconds = date.getSeconds();//초 
-        console.log (hours+"/"+minutes+"/"+seconds);
+        // console.log (hours+"/"+minutes+"/"+seconds);
         //화면 출력 함수 호출
         setViewClock(hours,minutes,seconds);
     }
