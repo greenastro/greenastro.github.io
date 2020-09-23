@@ -328,7 +328,7 @@ p{
         justify-content:space-between;
     
     }
-    .Portfolio{
+    /* .Portfolio{
         width:100%;
         background-color: rgb(215,215,215);
     }
@@ -349,7 +349,7 @@ p{
         height: 470px;
         display: flex;
         flex-flow:column wrap;
-        align-items:flex-start; */
+        align-items:flex-start;
         width: 90%;
         display: flex;
        
@@ -359,10 +359,10 @@ p{
     }
     .Portfolio>div>.item{
         width:30%;
-        /* margin:1%; */
+        /* margin:1%; 
         padding-bottom:10px;
-    }
-}
+    } */
+
 
 
 

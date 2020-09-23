@@ -140,20 +140,21 @@ input[id="m"]:checked ~ .menu{
 
     width: 100%;
 }
-/*portfolio 사진 슬라이드 효과 줘서 3개만 보이게*/
+/*portfolio 사진 슬라이드 효과 라디오 버튼가운데로*/
 .Portfolio> .tab_btn{
     text-align:center;
 }
-/* 라디오 버튼 css*/
+/* 라디오 버튼 3개*/
 .Portfolio>.tab_btn > label{
     display: inline-block;
+    margin-top: 30px;
     width:20px;
     height:10px;
     border-radius: 40px;
     background-color:rgb(141, 245, 167);
 
 }
-/*라디오모양 버튼 감추기*/
+/*라디오모양  감추기*/
 .Portfolio>input [name="tab"]{
     display:none;
 }
@@ -161,23 +162,25 @@ input[id="m"]:checked ~ .menu{
 .Portfolio>input[id="tab1"]:checked ~ .tab_btn label[for="tab1"],
 .Portfolio>input[id="tab2"]:checked ~ .tab_btn label[for="tab2"],
 .Portfolio>input[id="tab3"]:checked ~ .tab_btn label[for="tab3"]
+/*선택된 버튼 색상*/
 {
     background-color: rgb(78, 81, 255);
 }
 
 
 /*Portfolio*/
-
-.Portfolio{
-    width:100%;
-    background-color:white;
-
-}
-.Portfolio>p{
+p{
     margin:10px auto;
     text-align: center;
     color:rgb(66,94,72);
     
+}
+
+.Portfolio{
+    width:100%;
+    text-align:center;
+    overflow: hidden;
+
 }
 /* .Portfolio>ul{
     width: 70%;
@@ -190,31 +193,40 @@ input[id="m"]:checked ~ .menu{
 } */
 
 .Portfolio>ul{
-    width: 500px;
-    height: 1200px;
-    margin:20px auto;
+    width: 600px;
+    height: 600px;
+    margin:20px 20px;
     position: relative;
     left:0;
     transition: 1s;
-    overflow: hidden;    
+    display: flex;
+    flex-wrap: nowrap;
+    
 }
+.item{
+    width: 250px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    margin-left: 15px;
+}
+/*왼쪽으로 300px씩 이동하기*/
 .Portfolio>ul>li{
-    width:500px;
-    height: 1200px;
-    padding-bottom:20px;
-    /* position: absolute;
-    float: left;
-} */
+    width:300px;
+    /* height: 1200px;
+    padding-bottom:20px; */
+    /* position: absolute;*/
+   /* float: left;  */
+} 
 
-.portfolio>input[id="tab1"]:checked ~ .tab_btn label[for="tab1"],
-.portfolio>input[id="tab2"]:checked ~ .tab_btn label[for="tab2"],
-.portfolio>info>input[id="tab3"]:checked ~ .tab_btn label[for="tab3"]
-{
-    left: -700px;
+.Portfolio>input[id="tab2"]:checked ~ ul{
+    left:-300px;
 }
-.info>input[id="tab3"]:checked ~ul{
-    left: -1400px;
+
+.Portfolio>input[id="tab3"]:checked ~ ul{
+    left:-600px;
 }
+
+
 
 
 .footer{
@@ -271,45 +283,46 @@ input[id="m"]:checked ~ .menu{
         line-height: 50px;
     }
    
+
+    /*포토폴리오 이미지 폭 */
     .Portfolio{
         width:100%;
         background-color: rgb(215,215,215);
     }
-    .Portfolio>p{
-        margin:10px auto;
-        text-align: center;
-        color:rgb(66,94,72);
-        
-    }
-    .Portfolio>ul> li{
-        display: inline;
-
-    }
+ 
+  
+     
     .Portfolio>ul{
-        /* width:700px;
-        margin:30px auto;
-        display: flex; */
-        /* box-sizing: border-box;
-        padding:10px;
-        max-width:700px;
-        margin : 0 auto;
-        height: 470px;
-        display: flex;
-        flex-flow:column wrap;
-        align-items:flex-start; */
-        width: 90%;
-        /* display: flex; */
-       
-        margin: 0px auto;
-        /* align-items: flex-start; */
+        text-align: center;
+        width: 70%;
+        margin: 40px auto;
+    }
+
+    .item{
+        width:550px;
+        margin-bottom: 30px;
         
     }
-    .Portfolio>div>.item{
-        width:30%;
-        /* margin:1%; */
-        padding-bottom:10px;
+    /*왼쪽으로 550px씩 이동하기*/
+    .Portfolio>ul>li{
+        width:550px;
+        /* height: 1200px;
+        padding-bottom:20px; */
+        /* position: absolute;*/
+       float: left; 
+    } 
+    
+    .Portfolio>input[id="tab2"]:checked ~ ul{
+        left:-700px;
     }
-}
+    
+    .Portfolio>input[id="tab3"]:checked ~ ul{
+        left:-1400px;
+    }
+    
+
+
+  
 
 
 
@@ -368,6 +381,40 @@ input[id="m"]:checked ~ .menu{
 .Portfolio>input [name="tab"]{
     display:none;
 }
+
+.Portfolio{
+    height:1500px;
+     display: flex;
+     
+     
+  
+}     
+.Portfolio>ul{
+    width: 100%;
+    text-align: center;
+    margin: 40px auto;
+   
+  
+
+}
+
+.item{
+    width:500px;
+    
+}
+
+.Portfolio>ul>li{
+
+    width:550px;
+    height: 1000px;
+
+    /* height: 1200px;
+    padding-bottom:20px; */
+
+ 
+} 
+
+
 
     
     .footer{
