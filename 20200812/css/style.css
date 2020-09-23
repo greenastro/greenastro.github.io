@@ -6,6 +6,13 @@ body{
     background-size:cover;
  
 }
+/*to do list*/
+.todo>span:nth-child(1){
+    color: red;
+}
+.todo>span:nth-child(2){
+    color : yellow;
+}
 /* 시간표시부 */
 #view-clock{
     position: absolute;

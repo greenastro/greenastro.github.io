@@ -36,8 +36,9 @@
         }
         
     }
-    //side 클릭시 스크롤 이동
-
+    //side menu 클릭시 스크롤 이동
+   
+   
 
     //window scroll event
     function onStageScroll() {
