@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio_e u n j i n </title>
+    <link href="develop_style.css" type="text/css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1bd41b8130.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="m" onclick="openNav()">
+        <label for="m">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div id="mySidenav" class="sidenav">
+          <a href="index.html">HOME</a></li>
+          <a href="#about">ABOUT ME</a></li>
+          <a href="#work">WORK</a></li>
+          <a href="#contact">CONTACT</a></li>
+        </div>
+       </nav>
+    <div id="work">
+        <h2>WORK</h2>
+        <ul class="w_menu">
+            <li><a href="all.html">ALL</a></li>
+            <li><a href="design.html">DESIGN</a></li>
+            <li><a href="develop.html">DEVELOPMENT</a></li>
+        </ul>
+            <div id="develop">
+            <div><a href="https://greenastro.github.io/web/index.html"></a></div></a>
+            <div><a href="https://greenastro.github.io/Grid/index.html"></a></div>
+            <div><a href="https://greenastro.github.io/200200825_/index.html"></a></div>
+          </div>
+      <script>
+        function openNav(){
+          let checkObj = document.getElementById("m");
+          console.log( checkObj.checked );      
+          if( checkObj.checked ){
+            //true
+            document.getElementById("mySidenav").style.right="0";
+          }
+          else{
+            //false
+            document.getElementById("mySidenav").style.right ="-300px";
+          }
+    
+        }
+        
+      </script>
+    </body>
+</html>
