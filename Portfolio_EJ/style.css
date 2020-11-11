@@ -334,7 +334,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     justify-content: space-around;
   }
 
-  #develop>a>div{
+  #develop>a{
     width:25%;
     height:100%;
     display:inline-block;
