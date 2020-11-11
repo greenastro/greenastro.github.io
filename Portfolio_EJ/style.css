@@ -335,7 +335,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
   }
 
   #develop>a{
-    width:25%;
+    width:inherit;
     height:100%;
     display:inline-block;
     background-color:#eee;
