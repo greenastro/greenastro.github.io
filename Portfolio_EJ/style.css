@@ -351,8 +351,8 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
                                 background-repeat: no-repeat;
                                 background-position: center;
                             }
-  #develop>a:nth-of-type(3){background-image: url(images/2-3.jpg);
-                              background-size:cover;
+  #develop>a:nth-of-type(3){background-image:url(images/2-3.JPG);
+                              background-size:contain;
                               background-position: center;
                               background-repeat: no-repeat;
                              }
