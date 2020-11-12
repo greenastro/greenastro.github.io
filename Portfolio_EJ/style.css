@@ -341,18 +341,18 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     background-color:#eee;
 
   }
-  #develop>a:nth-of-type(1){background-image: url(images/2-1.jpg);
+  #develop:nth-of-type(1) {background-image: url(images/2-1.jpg);
                              background-size:cover;
                              background-repeat: no-repeat;
                              background-position: center;
                             }
-  #develop>a:nth-of-type(2){background-image: url(images/2-2.jpg);
+  #develop:nth-of-type(2){background-image: url(images/2-2.jpg);
                                 background-size:cover;
                                 background-repeat: no-repeat;
                                 background-position: center;
                             }
-  #develop>a:nth-of-type(3){background-image:url(images/2-3.JPG);
-                              background-size:contain;
+  #develop:nth-of-type(3){background-image:url(images/2-3.JPG);
+                              background-size:cover;
                               background-position: center;
                               background-repeat: no-repeat;
                              }
