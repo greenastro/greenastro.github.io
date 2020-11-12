@@ -3,6 +3,7 @@
   border: 0;
   outline:none;
   list-style: none;
+  font-family:serif;
 }
 a:link{ color:#82765a; text-decoration: none;}
 a:visited{color:#82765a; text-decoration: none;}
@@ -268,10 +269,10 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     ;
   }
   #work>h2{
-    margin-left:7%;
+    margin-left:10%;
     font-size:50px;
     padding-top:5%;
-    color:#0e0607;
+    color:#ffebbb;;
 
   }
   .w_menu{
@@ -286,10 +287,10 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
      font-weight:bold;
   }
   .w_menu>li>a{
-    color:#403531
+    color:#white;
   }
   .w_menu>li>a:hover{
-      color:whitesmoke;
+      color:#ffebbb;
   }
   /*all, design, develop*/
   #all{
@@ -308,7 +309,6 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     height:100%;
     display:inline-block;
     background-color:#eee;
-    box-shadow:10px 5px 5px black;
 
   }
   #a_design>div:nth-of-type(1){background-image: url(images/1.jpg);
@@ -340,9 +340,8 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     height:100%;
     display:inline-block;
     background-color:#eee;
-    box-shadow:10px 5px 5px black;
-
   }
+
   #develop>a:nth-of-type(1) {background-image: url(images/2-1.jpg);
                              background-size:cover;
                              background-repeat: no-repeat;
@@ -418,7 +417,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
 .four>h1 {
     text-align: center;
     padding-top: 10%;
-    color:whitesmoke;
+    color:#ffebbb;
 }
 #contact {
     width: 100%;
@@ -433,7 +432,7 @@ label {
     width: 450px;
     text-align: left;
     font-size: 25px;
-    color: white;
+    color: #ffebbb;
 
 }
 input {
@@ -441,12 +440,12 @@ input {
     height: 35px;
     padding: 5px 20px 0px 20px;
     margin: 0 0 10px 0;
-    background:#8C7D61;
+    background:rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     font-family: sans-serif;
     font-size: 16px;
     color: #261F1D;
-    text-decoration-color: white;
+    text-decoration-color:#ffebbb;
 }
 
 textarea {
@@ -454,7 +453,7 @@ textarea {
     height: 200px;
     padding: 12px 20px 0px 20px;
     margin: 0 0 20px 0;
-    background:#8C7D61;
+    background:rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     font-family: sans-serif;
     font-size: 16px;
@@ -468,8 +467,8 @@ textarea {
     height: 30px;
     margin: 10px;
     padding: 10px;
-    background-color:#8C7D61;
-    color:#261F1D;
+    background-color:rgba(0, 0, 0, 0.8);
+    color:white;
     border-style: none;
     width: 90px;
     height: 80px;
@@ -480,7 +479,7 @@ textarea {
     
 }
 #send:hover {
-    color:#F2EEEB;
+    color:#ffebbb;
 }
 
 
