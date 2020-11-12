@@ -4,8 +4,8 @@
   outline:none;
   list-style: none;
 }
-a:link{ color:#82765a; text-decoration: none;}
-a:visited{color:#82765a; text-decoration: none;}
+a:link{ background-color:transparent; text-decoration: none;}
+a:visited{background-color:transparent;  text-decoration: none;}
 
 /*메인페이지*/
 #myVideo {
@@ -22,11 +22,11 @@ a:visited{color:#82765a; text-decoration: none;}
 .logo{
     font-size: 75px;
     font-weight: bold;
-    color:#82765a;
     position:relative;
     margin-top:5px;
     margin-left: 10%;
 }
+.logo>a{color:#ffebbb;}
 /*메뉴버튼*/
  #m {display:none;}
 label[for="m"]{
@@ -42,7 +42,7 @@ label[for="m"]{
 label[for="m"] span:nth-of-type(1){
     width:100%;
     height: 8px;
-    background-color: #82765a;
+    background-color: #ffebbb;
     position: absolute;
     transition:0.8s;
 }
@@ -50,7 +50,7 @@ label[for="m"] span:nth-of-type(2){
     width:100%;
     height: 8px;
     top:50%;
-    background-color: #82765a;
+    background-color: #ffebbb;
     position: absolute;
     transition:0.8s;
 }
@@ -58,13 +58,13 @@ label[for="m"] span:nth-of-type(3){
     width:100%;
     height: 8px;
     top:100%;
-    background-color: #82765a;
+    background-color: #ffebbb;
     position: absolute;
     transition: 0.8s;
 }
 
 input[id="m"]:checked + label[for="m"] span:nth-of-type(1){
-    background-color: white;
+    background-color:  #ffebbb;
     top:50%;
     transform: rotate(45deg);
     transition: 0.8s;
@@ -74,7 +74,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(2){
     transition:0.8s;
 }
 input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
-    background-color: white;
+    background-color: #ffebbb;
     top:50%;
     transform: rotate(-45deg);
     transition: 0.8s;
@@ -91,6 +91,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     overflow-x:hidden;
     padding-top:60px;
     transition:0.9s;
+  
 }
 /*The navigation menu links*/
 .sidenav a {
@@ -100,18 +101,19 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     letter-spacing: 10px;
     line-height: 50px;
     font-weight: bold;
-    color:#82765a;
+    color: #ffebbb;
     display: block;
     transition:0.3s;
 }
 .sidenav a:hover{
-    color:#f7bd32;
+    color:white;
     
 }
 #mySidenav{
     width:250px;
     height:100%;
-    background-color:white;
+    background-color:rgba(0, 0, 0, 0.623);
+    border-radius: 3px solid #ffebbb;
     height:671px;
 }
 
@@ -124,7 +126,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     width: 250px;
     margin-left: 15%;
     margin-top:8%;
-    color:#82765a;
+    color:white;
 }
 .moto> h1:first-child{
     width: 100%;
@@ -138,15 +140,15 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
 .viewmore{
     list-style: none;
     text-decoration: none;
-    color:#82765a;
     font-size: 15px;
     
 }
+.viewmore>a{color: white;}
 /*ABOUT*/
 #about{
     width: 100%;
     height: 911px;
-    background-color:#403531;
+    color:#ffebbb;
     padding-right: 20%;
 }
 
@@ -158,6 +160,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     margin-left:7%;
     font-size:50px;
     padding-top:5%;
+    color:
    }
 .left>p{
     width:50%;
@@ -165,7 +168,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     font-size:20px;
     font-family: 'Noto Sans KR', sans-serif;
     padding-top:2%;
-    color:#82765a;
+    color:white;
 }
 .left>h4{
     margin-left:10%;
@@ -180,7 +183,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     margin-left:10%;
     font-size:30px;
     padding-top:2rem;
-    color:#82765a;
+    color:white;
 }
 .right{
     width: 30%;
@@ -267,14 +270,13 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
 #work{
     width: 100%;
     height: 100%;
-    background-color:#73625C
-    ;
+    background-color:#73625C;
   }
   #work>h2{
     margin-left:7%;
     font-size:50px;
     padding-top:5%;
-    color:#0e0607;
+    color:color:white;
 
   }
   .w_menu{
@@ -289,15 +291,15 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
      font-weight:bold;
   }
   .w_menu>li>a{
-    color:#403531
+    color:white;
   }
   .w_menu>li>a:hover{
       color:whitesmoke;
   }
   /*all, design, develop*/
   #all{
-     width: 100%;
-      height: 800px;
+    width: 100%;
+    height: 800px;
   }
   #a_design{
     width:80%;
@@ -311,7 +313,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     height:100%;
     display:inline-block;
     background-color:#eee;
-    border-radius: 50px;
+    
 
   }
    
@@ -351,19 +353,18 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
                              background-size:cover;
                              background-repeat: no-repeat;
                              background-position: center;
-                             border-radius: 50px;
+                             
                             }
   #develop>a:nth-of-type(2){background-image: url(../images/2-2.jpg);
                                 background-size:cover;
                                 background-repeat: no-repeat;
                                 background-position: center;
-                                border-radius: 50px;
                             }
   #develop>a:nth-of-type(3){background-image: url(../images/2-3.jpg);
                               background-size:cover;
                               background-position: center;
                               background-repeat: no-repeat;
-                              border-radius: 50px;
+                             
                              }
  
 
@@ -400,8 +401,7 @@ input[id="m"]:checked + label[for="m"] span:nth-of-type(3){
     height:100%;
     display:inline-block;
     background-color:#eee;
-    border-radius: 50px;
-  }
+   }
 
 /*contact*/
 ::placeholder {
@@ -453,7 +453,7 @@ input {
     border-radius: 5px;
     font-family: sans-serif;
     font-size: 16px;
-    color: #261F1D;
+    color:white;
     text-decoration-color: white;
 }
 
@@ -466,7 +466,7 @@ textarea {
     border-radius: 5px;
     font-family: sans-serif;
     font-size: 16px;
-    color: #261F1D;
+    color:white;
 }
 
 #send {
@@ -477,7 +477,7 @@ textarea {
     margin: 10px;
     padding: 10px;
     background-color:#8C7D61;
-    color:#261F1D;
+    color:white;
     border-style: none;
     width: 90px;
     height: 80px;

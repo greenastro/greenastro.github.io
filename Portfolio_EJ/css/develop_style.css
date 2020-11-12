@@ -202,7 +202,7 @@
       left:-30%;
       width:339px;
       height: 336px;
-      background-image: url(images/profile.jpg);
+      background-image: url(../images/profile.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -227,35 +227,35 @@
   
   .skill>div:nth-of-type(1){ width: 90px;
                              height: 100%;
-                             background-image:url(images/html_logo.png);
+                             background-image:url(../images/html_logo.png);
                              background-size: contain;
                              background-repeat:no-repeat;
                              background-position: center;
   }
   .skill>div:nth-of-type(2){width: 90px;
       height: 100%;
-      background-image:url(images/css_logo.png);
+      background-image:url(../images/css_logo.png);
       background-size: contain;
       background-repeat:no-repeat;
       background-position: center;
   }
   .skill>div:nth-of-type(3){ width: 90px;
       height: 100%;
-      background-image:url(images/js_logo.png);
+      background-image:url(../images/js_logo.png);
       background-size: contain;
       background-repeat:no-repeat;
       background-position: center;
   }
   .skill>div:nth-of-type(4){width: 90px;
       height: 100%;
-      background-image:url(images/photo_logo.png);
+      background-image:url(../images/photo_logo.png);
       background-size: cover;
       background-repeat:no-repeat;
       background-position: center;
   }
   .skill>div:nth-of-type(5){ width: 90px;
       height: 100%;
-      background-image:url(images/ai_logo.png);
+      background-image:url(../images/ai_logo.png);
       background-size: cover;
       background-repeat:no-repeat;
       background-position: center;
@@ -311,23 +311,28 @@
         height:100%;
         display:inline-block;
         background-color:#eee;
-    
+       
       }
-      #develop>a:nth-of-type(1){background-image: url(images/2-1.jpg);
+      #develop>a:nth-of-type(1){background-image: url(../images/2-1.jpg);
                                  background-size:cover;
                                  background-repeat: no-repeat;
                                  background-position: center;
+                                 border-radius: 50px;
                                 }
-      #develop>a:nth-of-type(2){background-image: url(images/2-2.jpg);
+      #develop>a:nth-of-type(2){background-image: url(../images/2-2.jpg);
                                     background-size:cover;
                                     background-repeat: no-repeat;
                                     background-position: center;
+                                    border-radius: 50px;
                                 }
-      #develop>a:nth-of-type(3){background-image: url(images/2-3.jpg);
+      #develop>a:nth-of-type(3){background-image: url(../images/2-3.JPG);
                                   background-size:cover;
                                   background-position: center;
                                   background-repeat: no-repeat;
-                                  /*contact*/
+                                  border-radius: 50px;
+                                }
+
+/*contact*/
 ::placeholder {
     color:whitesmoke;
     opacity: 1; /* Firefox */
